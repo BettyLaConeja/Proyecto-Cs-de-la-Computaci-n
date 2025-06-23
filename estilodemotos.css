@@ -1,0 +1,219 @@
+/* Estilo base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+/* Encabezado con menú */
+header {
+  background-color: #403a3a;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2em;
+  color: #ff4500;
+  margin-bottom: 10px;
+}
+
+/* Menú horizontal */
+nav ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  background-color: #2a2a2a;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  position: relative;
+  display: inline-block;
+  padding: 14px 20px;
+  color: #f8f4f4;
+  text-shadow: 1px 1px 3px #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Línea animada debajo */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  bottom: 6px;
+  width: calc(100% - 40px);
+  height: 2px;
+  background-color: #ff4500;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover vistoso */
+nav a:hover {
+  color: #ffcc00;
+  transform: scale(1.05);
+  background-color: #444;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Sección principal con Grid */
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Tarjetas de contenido */
+.card {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.imagenes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+.imagenes-grid section {
+  background: #654949; /* opcional para ver el contenedor */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.imagenes-grid img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.imagenes-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* Imagen dentro de tarjetas */
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Sección que usa display: contents */
+.galeria-wrapper {
+  display: contents;
+}
+
+/* Elemento oculto con display: none */
+.oculto {
+  display: none;
+}
+
+/* Elemento oculto pero con espacio reservado */
+.oculto-con-espacio {
+  visibility: hidden;
+}
+
+/* Pie de página */
+footer {
+  background-color: #1f1f1f;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Botón de mostrar contenido oculto */
+.boton {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 1em;
+}
+
+.boton:hover {
+  background-color: #e03e00;
+}
+
+/* Formulario de contacto */
+form {
+  background-color: #1c1c1c;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(255, 69, 0, 0.3);
+}
+
+form h2 {
+  text-align: center;
+  color: #ff4500;
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #f5f5f5;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background-color: #2b2b2b;
+  color: #fff;
+  font-size: 1em;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #ff4500;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #e03e00;
+}
